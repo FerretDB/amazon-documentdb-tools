@@ -116,10 +116,7 @@ def scan_code(args, keywords):
 
 def main(args):
     parser = argparse.ArgumentParser(description="Parse the command line.")
-
-    latest_version = versions[-1]
-    parser.add_argument("--version", dest="version", action="store", default=latest_version, help="Check for FerretDB version compatibility (default is latest version)", choices=versions, required=False)
-
+    parser.add_argument("--version", dest="version", action="store", default=versions[-1], help="Check for FerretDB version compatibility (default is latest version)", choices=versions, required=False)
     parser.add_argument("--directory", dest="scanDir", action="store", help="Directory containing files to scan for compatibility", required=False)
     parser.add_argument("--file", dest="scanFile", action="store", help="Specific file to scan for compatibility", required=False)
     parser.add_argument("--excluded-extensions", dest="excludedExtensions", action="store", default="NONE", help="Filename extensions to exclude from scanning, comma separated", required=False)
@@ -242,8 +239,8 @@ def load_keywords():
         "$convert":{"mongodbversion":"4.0","1.0":"No"},
         "$cos":{"mongodbversion":"4.2","1.0":"No"},
         "$cosh":{"mongodbversion":"4.2","1.0":"No"},
-        "$count":{"mongodbversion":"4.0","1.0":"No"},
-        "$currentDate":{"mongodbversion":"4.0","1.0":"No"},
+        "$count":{"mongodbversion":"4.0","1.0":"Yes"},
+        "$currentDate":{"mongodbversion":"4.0","1.0":"Yes"},
         "$currentOp":{"mongodbversion":"4.0","1.0":"No"},
         "$dateAdd":{"mongodbversion":"1.0","1.0":"No"},
         "$dateDiff":{"mongodbversion":"1.0","1.0":"No"},
@@ -279,7 +276,7 @@ def load_keywords():
         "$geoWithin":{"mongodbversion":"4.0","1.0":"No"},
         "$getField":{"mongodbversion":"1.0","1.0":"No"},
         "$graphLookup":{"mongodbversion":"4.0","1.0":"No"},
-        "$group":{"mongodbversion":"4.0","1.0":"No"},
+        "$group":{"mongodbversion":"4.0","1.0":"Yes"},
         "$gt":{"mongodbversion":"4.0","1.0":"No"},
         "$gte":{"mongodbversion":"4.0","1.0":"No"},
         "$hour":{"mongodbversion":"4.0","1.0":"No"},
@@ -313,7 +310,7 @@ def load_keywords():
         "$lte":{"mongodbversion":"4.0","1.0":"No"},
         "$ltrim":{"mongodbversion":"4.0","1.0":"No"},
         "$map":{"mongodbversion":"4.0","1.0":"No"},
-        "$match":{"mongodbversion":"4.0","1.0":"No"},
+        "$match":{"mongodbversion":"4.0","1.0":"Yes"},
         "$max":{"mongodbversion":"4.0","1.0":"No"},
         "$maxDistance":{"mongodbversion":"4.0","1.0":"No"},
         "$maxN":{"mongodbversion":"5.2","1.0":"No"},
@@ -344,7 +341,7 @@ def load_keywords():
         "$pop":{"mongodbversion":"4.0","1.0":"No"},
         "$position":{"mongodbversion":"4.0","1.0":"No"},
         "$pow":{"mongodbversion":"4.0","1.0":"No"},
-        "$project":{"mongodbversion":"4.0","1.0":"No"},
+        "$project":{"mongodbversion":"4.0","1.0":"Yes"},
         "$pull":{"mongodbversion":"4.0","1.0":"No"},
         "$pullAll":{"mongodbversion":"4.0","1.0":"No"},
         "$push":{"mongodbversion":"4.0","1.0":"No"},
@@ -357,7 +354,7 @@ def load_keywords():
         "$regexFind":{"mongodbversion":"4.2","1.0":"No"},
         "$regexFindAll":{"mongodbversion":"4.2","1.0":"No"},
         "$regexMatch":{"mongodbversion":"4.2","1.0":"No"},
-        "$rename":{"mongodbversion":"4.0","1.0":"No"},
+        "$rename":{"mongodbversion":"4.0","1.0":"Yes"},
         "$replaceAll":{"mongodbversion":"4.4","1.0":"No"},
         "$replaceOne":{"mongodbversion":"4.4","1.0":"No"},
         "$replaceRoot":{"mongodbversion":"4.0","1.0":"No"},
@@ -380,9 +377,9 @@ def load_keywords():
         "$sin":{"mongodbversion":"4.2","1.0":"No"},
         "$sinh":{"mongodbversion":"4.2","1.0":"No"},
         "$size":{"mongodbversion":"4.0","1.0":"No"},
-        "$skip":{"mongodbversion":"4.0","1.0":"No"},
+        "$skip":{"mongodbversion":"4.0","1.0":"Yes"},
         "$slice":{"mongodbversion":"4.0","1.0":"No"},
-        "$sort":{"mongodbversion":"4.0","1.0":"No"},
+        "$sort":{"mongodbversion":"4.0","1.0":"Yes"},
         "$sortArray":{"mongodbversion":"5.2","1.0":"No"},
         "$sortByCount":{"mongodbversion":"4.0","1.0":"No"},
         "$split":{"mongodbversion":"4.0","1.0":"No"},
@@ -420,9 +417,9 @@ def load_keywords():
         "$type":{"mongodbversion":"4.0","1.0":"No"},
         "$unionWith":{"mongodbversion":"4.4","1.0":"No"},
         "$uniqueDocs":{"mongodbversion":"4.0","1.0":"No"},
-        "$unset":{"mongodbversion":"4.0","1.0":"No"},
+        "$unset":{"mongodbversion":"4.0","1.0":"Yes"},
         "$unsetField":{"mongodbversion":"1.0","1.0":"No"},
-        "$unwind":{"mongodbversion":"4.0","1.0":"No"},
+        "$unwind":{"mongodbversion":"4.0","1.0":"Yes"},
         "$week":{"mongodbversion":"4.0","1.0":"No"},
         "$where":{"mongodbversion":"4.0","1.0":"No"},
         "$year":{"mongodbversion":"4.0","1.0":"No"},
