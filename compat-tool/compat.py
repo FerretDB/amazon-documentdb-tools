@@ -422,7 +422,7 @@ def load_keywords():
         "$week":{"mongodbversion":"4.0","3.6":"Yes","4.0":"Yes","5.0":"Yes","EC5.0":"Yes","FerretDB":"No"},
         "$where":{"mongodbversion":"4.0","3.6":"No","4.0":"No","5.0":"No","EC5.0":"No","FerretDB":"No"},
         "$year":{"mongodbversion":"4.0","3.6":"Yes","4.0":"Yes","5.0":"Yes","EC5.0":"Yes","FerretDB":"No"},
-        "$zip":{"mongodbversion":"4.0","3.6":"Yes","4.0":"Yes","5.0":"Yes","EC5.0":"Yes"},"FerretDB":"No"}
+        "$zip":{"mongodbversion":"4.0","3.6":"Yes","4.0":"Yes","5.0":"Yes","EC5.0":"Yes","FerretDB":"No"}}
         
     return thisKeywords
 
