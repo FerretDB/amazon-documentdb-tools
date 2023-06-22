@@ -393,7 +393,7 @@ def load_keywords():
         "$substrBytes":{"mongodbversion":"4.0","1.0":"No"},
         "$substrCP":{"mongodbversion":"4.0","1.0":"No"},
         "$subtract":{"mongodbversion":"4.0","1.0":"No"},
-        "$sum":{"mongodbversion":"4.0","1.0":"No"},
+        "$sum":{"mongodbversion":"4.0","1.0":"Yes"},
         "$switch":{"mongodbversion":"4.0","1.0":"No"},
         "$tan":{"mongodbversion":"4.2","1.0":"No"},
         "$tanh":{"mongodbversion":"4.2","1.0":"No"},
