@@ -296,7 +296,7 @@ def load_keywords():
         "$last":{"mongodbversion":"4.0","1.0":"No"},
         "$lastN":{"mongodbversion":"5.2","1.0":"No"},
         "$let":{"mongodbversion":"4.0","1.0":"No"},
-        "$limit":{"mongodbversion":"4.0","1.0":"No"},
+        "$limit":{"mongodbversion":"4.0","1.0":"Yes"},
         "$linearFill":{"mongodbversion":"5.3","1.0":"No"},
         "$listLocalSessions":{"mongodbversion":"4.0","1.0":"No"},
         "$listSessions":{"mongodbversion":"4.0","1.0":"No"},
