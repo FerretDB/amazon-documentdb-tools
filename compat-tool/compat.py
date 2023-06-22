@@ -7,7 +7,7 @@ import re
 import argparse
 
 # FerretDB major-minor versions
-versions = ['1.0', '1.1', '1.2', '1.3', '1.4', '1.5']
+versions = ['1.0', '1.1', '1.2', '1.3', '1.4']
 processingFeedbackLines = 10000
 issuesDict = {}
 detailedIssuesDict = {}
